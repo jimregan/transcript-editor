@@ -214,18 +214,18 @@ This app currently supports logging in through Google or Facebook accounts (via 
 8. Open up your `config/application.yml`
 9. For each development and production, copy the values listed for *Client ID* and *Client secret* into the appropriate key-value entry, e.g.
 
-   ```
+```
    development:
      GOOGLE_CLIENT_ID: 1234567890-abcdefghijklmnop.apps.googleusercontent.com
      GOOGLE_CLIENT_SECRET: aAbBcCdDeEfFgGhHiIjKlLmM
    production:
      GOOGLE_CLIENT_ID: 0987654321-ghijklmnopabcdef.apps.googleusercontent.com
      GOOGLE_CLIENT_SECRET: gGhHiIjKlLmMaAbBcCdDeEfF
-  ```
+```
 
 10. Google login is now enabled in the Rails app. Now we need to enable it in the UI. Open up `project/my-project/project.json`.  Under `auth_providers` enter:
 
-   ```
+```
    "authProviders": [
      {
        "name": "google",
@@ -233,7 +233,7 @@ This app currently supports logging in through Google or Facebook accounts (via 
        "path": "/auth/google_oauth2"
      }
    ],
-   ```
+```
 
 11. Run `rake project:load['my-project']` to refresh this config in the interface
 12. Finally, restart your server and visit `http://localhost:3000`.  Now you should see the option to sign in via Google.
@@ -259,7 +259,7 @@ This app currently supports logging in through Google or Facebook accounts (via 
    production:
      FACEBOOK_APP_ID: "7890123456123456"
      FACEBOOK_APP_SECRET: nopqrstuvwxyz123456abcdefghijklm
-  ```
+   ```
 
 10. Facebook login is now enabled in the Rails app. Now we need to enable it in the UI. Open up `project/my-project/project.json`.  Under `auth_providers` enter:
 
